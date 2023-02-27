@@ -9,6 +9,14 @@ const app = Vue.createApp({
             monsterHealth:100,
         }
     },
+    computed:{
+        monsterBarStyles(){
+            return {width:this.monsterHealth + '%'};
+        },
+        playerbarStyles(){
+         return {width:this.playerHealth + '%'}
+        }
+    },
     methods:{
         attackMonster(){
             const attackValue = randomAttackValue(5,12);
